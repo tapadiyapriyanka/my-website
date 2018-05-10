@@ -8,11 +8,9 @@ https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/
 """
 
 import os
-
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "resume_website.settings")
 from django.core.wsgi import get_wsgi_application
 
 from dj_static import Cling
-
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "resume_website.settings")
 
 application = Cling(get_wsgi_application())
